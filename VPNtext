@@ -1,0 +1,14 @@
+client
+dev tun
+remote *TO BE CHANGED* 17315
+key-direction 1
+resolv-retry infinite
+nobind
+persist-tun
+verb 2
+reneg-sec 86400
+route-method exe
+route-delay 2
+redirect-gateway def1
+hand-window 30
+mute 3

@@ -1,0 +1,13 @@
+from: stackoverflow.com/questions/14543570/how-to-print-a-variable-with-requests-and-json
+-----------------------------------
+import requests
+
+response = requests.get(...)
+data = response.json()
+----------------------------------------
+data mirrors the structure of the JSON it's reading. For example, if the response is: [{"a": {...}}], data is a list, with list[0] == {'a': {...}}. If the response is {"a": "b", "c": "d"}, data is a dict. 
+----------------------------------------
+from: http://xmodulo.com/how-to-parse-json-string-in-python.html
+ ---------------------------------------------------------------------------
+
+
