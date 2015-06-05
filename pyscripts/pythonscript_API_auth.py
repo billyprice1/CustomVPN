@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import requests, time, uuid, hmac, hashlib, base64, json
 BASE_URL = 'https://localhost:9700'
-API_TOKEN = 'xxxxxxxxxxx'
-API_SECRET = 'xxxxxxxxxxx'
+API_TOKEN = 'xxxxxxxxx'
+API_SECRET = 'xxxxxxxxx'
 
 def auth_request(method, path, headers=None, data=None):
     auth_timestamp = str(int(time.time()))
