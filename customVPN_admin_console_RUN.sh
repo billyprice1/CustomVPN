@@ -62,8 +62,15 @@ do
 				tar xvf *.tar
 				mv *.ovpn "$NORM_NEWUSER".ovpn
 				echo "**************************************************"
-				#changing OpenVPN client config text according to the contents of 'VPNtext'
-				/bin/bash client_config_editor.sh
+				echo "Do you want to apply a custom OpenVPN client configuration? [N/y]"
+                                read RESPONSE
+                                if [ "$RESPONSE" = 'y|Y|Yes|yes|oui|Oui|ja|Ja' ]
+                                then
+					#changing OpenVPN client config text according to the contents of 'VPNtext'
+                                        /bin/bash client_config_editor.sh
+				else
+                                        echo "OK, skipping custom parameters"
+                                fi      
 				echo "**************************************************"
 				sed "s/@@@@@/$NORM_NEWUSER/g" openvpn_installer_script.nsi > openvpn_installer_script_"$NORM_NEWUSER".nsi
 				sed -i "s/~~~~~/$NORM_NEWUSER/g" openvpn_installer_script_"$NORM_NEWUSER".nsi
