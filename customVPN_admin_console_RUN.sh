@@ -60,6 +60,7 @@ do
 				echo
 				echo "Downloaded and untarred following file:"
 				tar xvf *.tar
+				mv *.ovpn "$NORM_NEWUSER".ovpn
 				echo "**************************************************"
 				#changing OpenVPN client config text according to the contents of 'VPNtext'
 				/bin/bash client_config_editor.sh
