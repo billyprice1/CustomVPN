@@ -13,8 +13,8 @@ sleep 4
 echo
 cd && wget -nv http://nsis.sourceforge.net/mediawiki/images/6/6c/Shelllink.zip &&
 unzip -d Shelllink Shelllink.zip &&
-cp Shelllink/Unicode/Plugins/ShellLink.dll /usr/share/nsis/Plugins/ &&
-rm -r Shelllink
+sudo cp Shelllink/Unicode/Plugins/ShellLink.dll /usr/share/nsis/Plugins/ &&
+rm -fr Shelllink Shelllink.zip
 clear
 echo "successfully finished install script"
 
