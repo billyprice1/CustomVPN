@@ -40,9 +40,9 @@ Section ""
         SetOutPath $EXEDIR
         DetailPrint "Extracting OpenVPN $OUTDIR"
         # Bundle OpenVPN Installer
-        File source\openvpn-install-2.3.6-I603-i686.exe
+        File source\openvpn-install-2.3.8-I601-i686.exe
         # ExecShell "open" "$EXEDIR\openvpn-2.1.1-install.exe"
-		ExecWait '"openvpn-install-2.3.6-I603-i686.exe" /S $0' 
+		ExecWait '"openvpn-install-2.3.8-I601-i686.exe" /S $0' 
         # Zero == Success, One == Fail, handle
         IntCmp $0 0 goodInstall
             DetailPrint "Failed to Install: $0"
@@ -59,7 +59,7 @@ Section ""
     # Full contents of Config
     File /r /x .svn *.ovpn
 		
-	Delete "$EXEDIR\openvpn-install-2.3.6-I603-i686.exe"
+	Delete "$EXEDIR\openvpn-install-2.3.8-I601-i686.exe"
 	
 	Delete "C:\Users\Public\Desktop\OpenVPN GUI.lnk"
 	Delete "C:\Documents and Settings\All Users\Desktop\OpenVPN GUI.lnk"
